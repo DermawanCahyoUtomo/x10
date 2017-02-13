@@ -176,7 +176,7 @@ cc.RenderGrid = function(){
 			width : 100
 		}, {
 		 	template : function(x){
-		 		return "<button class='btn btn-xs btn-primary tooltipster' onclick='cc.getEdit(\""+ x.Id + "\")'><i class='fa fa-edit'></i></button>"
+		 		return "<button class='btn btn-xs btn-primary add-userrights confirm-userrights tooltipster' onclick='cc.getEdit(\""+ x.Id + "\")'><i class='fa fa-edit'></i></button>"
 		 	},
 		 	width : 50,
 		 	     headerAttributes: { class: 'k-header header-bgcolor' },

@@ -127,18 +127,18 @@
 	<div class="col-md-12">
 		<!-- <button data-bind="click: apcom.saveSanction" class="btn btn-sm btn-flat btn-space btn-confirm sanction">Sanction</button> -->
 
-		<button data-bind="click: apcom.checkingAndSaveStatus('Approved')" class="btn btn-sm btn-flat btn-space btn-save checkLatestStatus">Approve</button>
-		<button data-bind="click: apcom.checkingAndSaveStatus('Rejected')" class="btn btn-sm btn-flat btn-space btn-hold checkLatestStatus">Reject</button>
-		<button data-bind="click: apcom.checkingAndSaveStatus('Cancelled')" class="btn btn-sm btn-flat btn-space btn-freeze checkLatestStatus">Cancel</button>
-		<button data-bind="click: apcom.checkingAndSaveStatus('On Hold')" class="btn btn-sm btn-flat btn-space btn-confirm sanction checkLatestStatus">Hold</button>
-		<button data-bind="click: apcom.checkingAndSaveStatus('Sent Back')" class="btn btn-sm btn-flat btn-space btn-freeze checkLatestStatus">Send Back For Analysis</button>
+		<button data-bind="click: apcom.checkingAndSaveStatus('Approved')" class="btn btn-sm btn-flat btn-space btn-save checkLatestStatus add-userrights confirm-userrights">Approve</button>
+		<button data-bind="click: apcom.checkingAndSaveStatus('Rejected')" class="btn btn-sm btn-flat btn-space btn-hold checkLatestStatus add-userrights confirm-userrights">Reject</button>
+		<button data-bind="click: apcom.checkingAndSaveStatus('Cancelled')" class="btn btn-sm btn-flat btn-space btn-freeze checkLatestStatus add-userrights confirm-userrights">Cancel</button>
+		<button data-bind="click: apcom.checkingAndSaveStatus('On Hold')" class="btn btn-sm btn-flat btn-space btn-confirm sanction checkLatestStatus add-userrights confirm-userrights">Hold</button>
+		<button data-bind="click: apcom.checkingAndSaveStatus('Sent Back')" class="btn btn-sm btn-flat btn-space btn-freeze checkLatestStatus add-userrights confirm-userrights">Send Back For Analysis</button>
 	</div>
 </div>
 <div class="col-md-12 content-container" data-bind="with:apcom">
 
 	<div class="col-md-12 form-group">
-    	<button class="btn btn-sm btn-flat btn-save save btn-space pull-left ca" data-bind="click: apcom.sendCreditAnalyst">Save</button>
-    	<button class="btn btn-sm btn-flat btn-reset btn-space pull-left ca" data-bind="click: apcom.resetCreditAnalyst">Reset</button>
+    	<button class="btn btn-sm btn-flat btn-save save btn-space pull-left ca add-userrights confirm-userrights" data-bind="click: apcom.sendCreditAnalyst">Save</button>
+    	<button class="btn btn-sm btn-flat btn-reset btn-space pull-left ca add-userrights confirm-userrights" data-bind="click: apcom.resetCreditAnalyst">Reset</button>
     	<!-- <button class="btn btn-sm btn-flat btn-confirm btn-space pull-left">Confirm</button> -->
     	<!-- <button class="btn btn-sm btn-flat btn-reenter btn-space pull-left">Re-Enter</button> -->
 	</div>
@@ -214,6 +214,6 @@
 	</div>
 
 	<div class="form-group">
-    	<button class="btn btn-sm btn-flat btn-save" id="send" data-bind="click: apcom.sendCreditAnalyst">Send to Decision Committee</button>
+    	<button class="btn btn-sm btn-flat btn-save add-userrights confirm-userrights" id="send" data-bind="click: apcom.sendCreditAnalyst">Send to Decision Committee</button>
 	</div>
 </div>

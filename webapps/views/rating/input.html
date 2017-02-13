@@ -92,8 +92,8 @@ model.Fullname= ko.observable('{{.Fullname}}');
 		<div class="panel ez">
 			<div class="panel-body">
 				<div class="filter col-md-12 no-padding hardcore align-right">
-					<button class="btn btn-sm btn-confirm" data-bind="click: r.newRatingModel">New Rating Model</button>
-					<button class="btn btn-sm btn-freeze" data-bind="click: r.refreshMain">Refresh</button>
+					<button class="btn btn-sm btn-confirm add-userrights confirm-userrights" data-bind="click: r.newRatingModel">New Rating Model</button>
+					<button class="btn btn-sm btn-freeze add-userrights confirm-userrights" data-bind="click: r.refreshMain">Refresh</button>
 				</div>
 				<div class="clearfix"></div>
 				<div style="padding-top: 10px;">
@@ -109,11 +109,11 @@ model.Fullname= ko.observable('{{.Fullname}}');
 		<div class="panel ez">
 			<div class="panel-body">
 				<div class="filter col-md-12 no-padding hardcore align-right">
-					<button class="btn btn-sm btn-reset" data-bind="click: r.backToMain"><i class="fa fa-arrow-left"></i> Back</button>
-					<button class="btn btn-sm btn-add" data-bind="click: r.showFormAdd">Add New</button>
-					<button class="btn btn-sm btn-freeze" data-bind="click: r.refresh">Refresh</button>
-					<button class="btn btn-sm btn-save" data-bind="click: r.save">Save Changes</button>
-					<button class="btn btn-sm btn-confirm" data-bind="click: r.expandfunction">Expand/Collapse all</button>
+					<button class="btn btn-sm btn-reset add-userrights confirm-userrights" data-bind="click: r.backToMain"><i class="fa fa-arrow-left"></i> Back</button>
+					<button class="btn btn-sm btn-add add-userrights confirm-userrights" data-bind="click: r.showFormAdd">Add New</button>
+					<button class="btn btn-sm btn-freeze add-userrights confirm-userrights" data-bind="click: r.refresh">Refresh</button>
+					<button class="btn btn-sm btn-save add-userrights confirm-userrights" data-bind="click: r.save">Save Changes</button>
+					<button class="btn btn-sm btn-confirm add-userrights confirm-userrights" data-bind="click: r.expandfunction">Expand/Collapse all</button>
 					<!-- <a class="btn btn-sm btn-primary" target="_blank" href="/ratio/input">
 						<i class="fa fa-eye"></i> View Result
 					</a> -->

@@ -123,9 +123,9 @@ model.Fullname= ko.observable('{{.Fullname}}');
 		        	</div>
 				</div>
 				<div class="controls" style="text-align: right;">
-					<button class="btn btn-sm btn-primary" data-bind="click: formula.showModalFinancial">Add New</button>
-					<button class="btn btn-sm btn-primary" data-bind="click: formula.refresh">Refresh</button>
-					<button class="btn btn-sm btn-warning" onclick="formula.exportExcel('.grid', 'Formula')">Export to Excel</button>
+					<button class="btn btn-sm btn-primary add-userrights confirm-userrights" data-bind="click: formula.showModalFinancial">Add New</button>
+					<button class="btn btn-sm btn-primary add-userrights confirm-userrights" data-bind="click: formula.refresh">Refresh</button>
+					<button class="btn btn-sm btn-warning add-userrights confirm-userrights" onclick="formula.exportExcel('.grid', 'Formula')">Export to Excel</button>
 					<!-- <button id="onreset" data-bind="visible: (adf.formVisibility() == true )" class="btn btn-sm btn-primary separator" style="margin-right: inherit;" onclick="adf.getReset()">
 						<i class="fa fa-trash-o" aria-hidden="true"></i> Reset
 					</button>

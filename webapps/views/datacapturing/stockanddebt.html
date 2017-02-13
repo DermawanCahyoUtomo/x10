@@ -776,9 +776,9 @@
             <div class="col-md-6">
               <!-- <h4 data-bind="html: model.currentTitle()" style="margin-top: 4px">&nbsp;</h4> -->
               <div class="panel-nav-button panel-nav-custom">
-                <button class="btn btn-save button-font btn-dis" style="width: 70px" data-bind="click: save(),enable: (!stockanddebtCloning.IsConfirm())">Save</button>
-                <button class="btn btn-confirm button-font btn-dis" style="width: 70px" data-bind="text: stockanddebtCloning.ConfirmText, click: setConfirm(), enable: (!stockanddebtCloning.IsFreeze())">Confirm</button>
-                <button class="btn btn-freeze button-font" style="width: 70px" data-bind="text: stockanddebtCloning.FreezeText, click: setFreeze(), css: checkBtnFreeze">Freeze</button>
+                <button class="btn btn-save button-font btn-dis add-userrights confirm-userrights" style="width: 70px" data-bind="click: save(),enable: (!stockanddebtCloning.IsConfirm())">Save</button>
+                <button class="btn btn-confirm button-font btn-dis add-userrights confirm-userrights" style="width: 70px" data-bind="text: stockanddebtCloning.ConfirmText, click: setConfirm(), enable: (!stockanddebtCloning.IsFreeze())">Confirm</button>
+                <button class="btn btn-freeze button-font add-userrights confirm-userrights" style="width: 70px" data-bind="text: stockanddebtCloning.FreezeText, click: setFreeze(), css: checkBtnFreeze">Freeze</button>
               </div>
             </div>
             <div class="col-md-6">

@@ -117,10 +117,10 @@ model.Fullname = ko.observable('{{.Fullname}}');
 							<i class="fa fa-refresh"></i> Refresh
 						</button> -->
 						<div style="float: left; margin-right: 50px;">
-							<button class="btn btn-save button-font btn-dis" style="width: 70px" data-bind="visible: (r.customerId() != ''), enable: (!isConfirmed() && !isFrozen())" onclick="ratioInput.selectAction('save')">Save</button>
-							<button class="btn btn-confirm button-font btn-dis" style="width: 70px" data-bind="text: confirmLabel, visible: (r.customerId() != ''), enable: !IsFrozen()" onclick="ratioInput.selectAction('confirm')">Confirm</button>
-							<button class="btn btn-freeze button-font" style="width: 70px" data-bind="click: freeze(true), visible: (r.customerId() != '') && (!r.IsFrozen())">Freeze</button>
-							<button class="btn btn-details button-font" style="width: 70px" data-bind="click: freeze(false), visible: (r.customerId() != '') && (r.IsFrozen())">Unfreeze</button>
+							<button class="btn btn-save button-font btn-dis add-userrights confirm-userrights" style="width: 70px" data-bind="visible: (r.customerId() != ''), enable: (!isConfirmed() && !isFrozen())" onclick="ratioInput.selectAction('save')">Save</button>
+							<button class="btn btn-confirm button-font btn-dis add-userrights confirm-userrights" style="width: 70px" data-bind="text: confirmLabel, visible: (r.customerId() != ''), enable: !IsFrozen()" onclick="ratioInput.selectAction('confirm')">Confirm</button>
+							<button class="btn btn-freeze button-font add-userrights confirm-userrights" style="width: 70px" data-bind="click: freeze(true), visible: (r.customerId() != '') && (!r.IsFrozen())">Freeze</button>
+							<button class="btn btn-details button-font add-userrights confirm-userrights" style="width: 70px" data-bind="click: freeze(false), visible: (r.customerId() != '') && (r.IsFrozen())">Unfreeze</button>
 						</div>
 						<div class="container-select" style="float: left;">
 							<div id="selectTypeDate" data-bind="visible: (r.customerId() != '')" style="float: left; width: 150px; margin-right: 20px;"></div>
@@ -130,7 +130,7 @@ model.Fullname = ko.observable('{{.Fullname}}');
 							<div id="selectDateProjected" data-bind="visible: ( (r.customerId() != '') && (r.AuditedDate() != '') )" style="float: left; margin-right: 20px;"></div>
 						</div>
 						<div style="float: right;">
-							<button id="export" class="btn btn-add button-font btn-dis" data-bind="visible: (r.customerId() != ''), enable: !IsFrozen()" onclick="r.exportExcel('.divright', filter().CustomerSearchText()+' - '+filter().DealNumberSearchVal())">Export as Excel</button>
+							<button id="export" class="btn btn-add button-font btn-dis add-userrights confirm-userrights" data-bind="visible: (r.customerId() != ''), enable: !IsFrozen()" onclick="r.exportExcel('.divright', filter().CustomerSearchText()+' - '+filter().DealNumberSearchVal())">Export as Excel</button>
 						</div>
 					</div>
 					<div class="col-sm-12 no-padding">

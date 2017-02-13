@@ -79,8 +79,8 @@ model.Fullname= ko.observable('{{.Fullname}}');
                 &nbsp;
             </h3>
             <div class="panel-nav-button" style="margin-right: 16px;">
-              <button  type="button" class="btn btn-sm btn-success btn-flat" data-bind="click:AddNew"><i class="fa fa-plus"></i> Add New</button>
-              <button class="btn btn-sm btn-info tooltipster" title="Toggle Advanced Filter" data-bind="click: toggleFilter"><i class="fa fa-server"></i> Show Filter</button>
+              <button  type="button" class="btn btn-sm btn-success add-userrights confirm-userrights btn-flat" data-bind="click:AddNew"><i class="fa fa-plus"></i> Add New</button>
+              <button class="btn btn-sm btn-info add-userrights confirm-userrights tooltipster" title="Toggle Advanced Filter" data-bind="click: toggleFilter"><i class="fa fa-server"></i> Show Filter</button>
             </div>
           </div>
           <div class="panel-body">
@@ -102,8 +102,8 @@ model.Fullname= ko.observable('{{.Fullname}}');
               <h3 class="no-margin">Filter</h3>
               <div class="panel-nav-button" style="margin-right: 16px;">
                   <div class="form-group relative align-right no-margin no-padding hardcore">
-                      <button type="button" btn-sm class="btn btn-sm btn-primary btn-flat" data-bind="click:Search"><i class="fa fa-search"></i> Search</button>
-                      <button type="button" class="btn btn-sm btn-danger btn-flat" data-bind="click:Reset"><i class="fa fa-refresh"></i> Reset</button>
+                      <button type="button" btn-sm class="btn btn-sm btn-primary btn-flat add-userrights confirm-userrights" data-bind="click:Search"><i class="fa fa-search"></i> Search</button>
+                      <button type="button" class="btn btn-sm btn-danger btn-flat add-userrights confirm-userrights" data-bind="click:Reset"><i class="fa fa-refresh"></i> Reset</button>
                   </div>
               </div>
           </div>

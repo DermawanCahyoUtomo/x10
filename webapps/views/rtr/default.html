@@ -47,12 +47,12 @@ model.Fullname = ko.observable('{{.Fullname}}');
         <div class="panel-body" style="margin-top: -37px;">
             <div class="panel-body" id="buttonsection">
             <!-- <div class="panel-nav-button pull-left"> -->
-                <button class="btn btn-sm btn-save" onclick="onsave()">Save</button>
+                <button class="btn btn-sm btn-save add-userrights confirm-userrights" onclick="onsave()">Save</button>
                 <!-- <button class="btn btn-sm btn-reset">Reset</button> -->
-                <button class="btn btn-sm btn-confirm" onclick="confirm()">Confirm</button>
-                <button class="btn btn-sm btn-reenter" onclick="onreenter()">Re-Enter</button>
-                <button class="btn btn-sm btn-freeze" onclick="onFreeze()">Freeze</button>
-                <button class="btn btn-sm btn-unfreeze" onclick="onUnfreeze()">Unfreeze</button>
+                <button class="btn btn-sm btn-confirm add-userrights confirm-userrights" onclick="confirm()">Confirm</button>
+                <button class="btn btn-sm btn-reenter add-userrights confirm-userrights" onclick="onreenter()">Re-Enter</button>
+                <button class="btn btn-sm btn-freeze add-userrights confirm-userrights" onclick="onFreeze()">Freeze</button>
+                <button class="btn btn-sm btn-unfreeze add-userrights confirm-userrights" onclick="onUnfreeze()">Unfreeze</button>
                 <span class="form-last-confirmation-info pull-right"></span>
               <!-- </div> -->
             </div>

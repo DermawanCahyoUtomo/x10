@@ -172,10 +172,10 @@ model.Fullname= ko.observable('{{.Fullname}}');
             <div class="panel">
             <div class="col-md-12">
               <div class="col-sm-12">
-                 <button class="btn btn-sm btn-success" style="margin-bottom: 10px;" data-bind="click: exportPDF,visible:ratioPdf.KI()[0].row().length>0">
+                 <button class="btn btn-sm btn-success add-userrights confirm-userrights" style="margin-bottom: 10px;" data-bind="click: exportPDF,visible:ratioPdf.KI()[0].row().length>0">
                  <i class="fa fa-file-pdf-o"></i>&nbsp; Export PDF
                 </button>
-                <button class="btn btn-sm btn-primary" style="margin-bottom: 10px;" data-bind="click: exportPDF,visible:ratioPdf.KI()[0].row().length>0">
+                <button class="btn btn-sm btn-primary add-userrights confirm-userrights" style="margin-bottom: 10px;" data-bind="click: exportPDF,visible:ratioPdf.KI()[0].row().length>0">
                  <i class="fa fa-envelope"></i>&nbsp; Email PDF
                 </button>
               </div>

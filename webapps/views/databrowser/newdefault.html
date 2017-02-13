@@ -72,10 +72,10 @@ model.Fullname = ko.observable('{{.Fullname}}');
 </div>
 <div id="panel-conten">
 	<div class="col-md-12" style="margin-left: 21px; margin-bottom: 12px;">
-		<button  type="button" btn-sm class="btn btn-sm btn-default btn-warning" data-bind="click: resetFilter">Reset</button>
-		<button  type="button" btn-sm class="btn btn-sm btn-default btn-primary" data-bind="click: refreshFilter">Refresh</button>
-		<button id="show"  type="button" btn-sm class="btn btn-sm btn-default btn-success" data-bind="visible: (filter.isHide() == true)" onclick="showMoreFilter()">More...</button>
-		<button id="hide"  type="button" btn-sm class="btn btn-sm btn-default btn-success" data-bind="visible: !(filter.isHide())" onclick="hideMoreFilter()">Hide</button>
+		<button  type="button" btn-sm class="btn btn-sm btn-default btn-warning add-userrights confirm-userrights" data-bind="click: resetFilter">Reset</button>
+		<button  type="button" btn-sm class="btn btn-sm btn-default btn-primary add-userrights confirm-userrights" data-bind="click: refreshFilter">Refresh</button>
+		<button id="show"  type="button" btn-sm class="btn btn-sm btn-default btn-success add-userrights confirm-userrights" data-bind="visible: (filter.isHide() == true)" onclick="showMoreFilter()">More...</button>
+		<button id="hide"  type="button" btn-sm class="btn btn-sm btn-default btn-success add-userrights confirm-userrights" data-bind="visible: !(filter.isHide())" onclick="hideMoreFilter()">Hide</button>
 	</div>
 
 	<div class="col-md-12">

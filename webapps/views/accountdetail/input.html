@@ -124,20 +124,20 @@ mincibil = ko.observable(0);
 				<div class="col-md-12">
 					<div class="panel-body btnFixed">
 						<div class="controls" style="text-align: left;">
-							<button id="onsave"  data-bind="visible: (adf.formVisibility() == true)" class="btn btn-sm btn-save separator ontop" onclick="adf.selectAction('save')" style="margin-right: inherit;">
+							<button id="onsave"  data-bind="visible: (adf.formVisibility() == true)" class="btn btn-sm btn-save separator ontop add-userrights confirm-userrights" onclick="adf.selectAction('save')" style="margin-right: inherit;">
 								Save
 							</button>
-							<button id="onreset" data-bind="visible: (adf.formVisibility() == true )" class="btn btn-sm btn-reset separator" style="margin-right: inherit;" onclick="adf.getReset()">
+							<button id="onreset" data-bind="visible: (adf.formVisibility() == true )" class="btn btn-sm btn-reset separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.getReset()">
 								Reset
 							</button>
 							<button id="onconfirm"
-							data-bind="visible: (adf.formVisibility() == true), css: (adf.optionChangeConfirm().toLowerCase() == ' re enter' ? 'btn-reenter' : 'btn-confirm')" class="btn btn-sm separator ontop" style="margin-right: inherit;" onclick="adf.selectAction('confirm')">
+							data-bind="visible: (adf.formVisibility() == true), css: (adf.optionChangeConfirm().toLowerCase() == ' re enter' ? 'btn-reenter' : 'btn-confirm')" class="btn btn-sm separator ontop add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.selectAction('confirm')">
 								<span data-bind="text: adf.optionChangeConfirm">Confirm
 							</button>
-							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  != true )" class="btn btn-sm btn-freeze onfreeze separator" style="margin-right: inherit;" onclick="adf.selectAction('freeze')">
+							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  != true )" class="btn btn-sm btn-freeze onfreeze separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.selectAction('freeze')">
 								Freeze
 							</button>
-							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  == true)" class="btn btn-sm btn-unfreeze onfreeze separator" style="margin-right: inherit;" onclick="adf.getUnfreeze()">
+							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  == true)" class="btn btn-sm btn-unfreeze onfreeze separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.getUnfreeze()">
 								Unfreeze
 							</button>
 							<span class="form-last-confirmation-info pull-right"></span>

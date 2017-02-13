@@ -130,22 +130,22 @@ model.Fullname = ko.observable('{{.Fullname}}');
 			<div data-bind="visible: (formVisible() == true)">
 				<div class="panel-body">
 					<div class="controls" style="text-align: left;">
-						<button id="onsave" class="btn btn-sm btn-save separator ontop" style="margin-right: inherit;" onclick="due.saveAll()">
+						<button id="onsave" class="btn btn-sm btn-save separator ontop add-userrights confirm-userrights" style="margin-right: inherit;" onclick="due.saveAll()">
 							Save
 						</button>
-						<button id="onreset" class="btn btn-sm btn-reset btn-confirm separator ontop" style="margin-right: inherit;" onclick="due.getReset()">
+						<button id="onreset" class="btn btn-sm btn-reset btn-confirm separator ontop add-userrights confirm-userrights" style="margin-right: inherit;" onclick="due.getReset()">
 							Reset
 						</button>
-						<button id="onconfirm" class="btn btn-sm btn-confirm separator ontop" style="margin-right: inherit;" data-bind="visible: (due.form.Status() == 0)" onclick="due.setConfirm()">
+						<button id="onconfirm" class="btn btn-sm btn-confirm separator ontop add-userrights confirm-userrights" style="margin-right: inherit;" data-bind="visible: (due.form.Status() == 0)" onclick="due.setConfirm()">
 							<span>Confirm</span>
 						</button>
-						<button id="onconfirm" class="btn btn-sm btn-reenter separator ontop" style="margin-right: inherit;" data-bind="visible: (due.form.Status() == 1)"onclick="due.setReEnter()">
+						<button id="onconfirm" class="btn btn-sm btn-reenter separator ontop add-userrights confirm-userrights" style="margin-right: inherit;" data-bind="visible: (due.form.Status() == 1)"onclick="due.setReEnter()">
 							<span>Re Enter</span>
 						</button>
-						<button class="btn btn-sm btn-freeze separator" style="margin-right: inherit;" data-bind="visible: (due.form.Freeze() == false)" onclick="due.setFreeze()">
+						<button class="btn btn-sm btn-freeze separator add-userrights confirm-userrights" style="margin-right: inherit;" data-bind="visible: (due.form.Freeze() == false)" onclick="due.setFreeze()">
 							Freeze
 						</button>
-						<button class="btn btn-sm btn-unfreeze separator" style="margin-right: inherit;" data-bind="visible: (due.form.Freeze() == true)" onclick="due.setUnFreeze()">
+						<button class="btn btn-sm btn-unfreeze separator add-userrights confirm-userrights" style="margin-right: inherit;" data-bind="visible: (due.form.Freeze() == true)" onclick="due.setUnFreeze()">
 							Unfreeze
 						</button>
 						<span class="form-last-confirmation-info pull-right"></span>
