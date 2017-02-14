@@ -1,21 +1,56 @@
 package main
 
 import (
+	"eaciit/x10/webapps/helper"
 	. "eaciit/x10/webapps/models"
 	webext "eaciit/x10/webapps/webext"
-	db "github.com/eaciit/dbox"
-	"github.com/eaciit/knot/knot.v1"
-	"github.com/eaciit/orm"
-	tk "github.com/eaciit/toolkit"
 	"log"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
+
+	db "github.com/eaciit/dbox"
+	"github.com/eaciit/knot/knot.v1"
+	"github.com/eaciit/orm"
+	tk "github.com/eaciit/toolkit"
+
+	"eaciit/x10/webapps/connection"
+	"eaciit/x10/webapps/omnifin"
 )
 
 var IncludeList = []string{
 	"/getdata",
+}
+
+func startTimer() {
+	timer := helper.Timer{}
+
+	cfg := connection.ReadConfig()
+
+	dura := 300 // default 5 mins
+	val, ok := cfg["userFetchDuration"]
+	if ok {
+		tmp, err := strconv.Atoi(val)
+		if err == nil {
+			dura = tmp
+		}
+	}
+
+	if dura > 0 {
+		tk.Printfn("Fetch master user every %d secs", dura)
+		timer.Add(time.Duration(dura)*time.Second, func() {
+			tk.Println("Update MasterUser")
+			err := omnifin.ProcessMasterUser()
+			if err != nil {
+				tk.Printfn("%s", err)
+			}
+		})
+	} else {
+		tk.Printfn("Fetch master user disabled")
+	}
+
+	timer.Start()
 }
 
 func main() {
@@ -26,6 +61,7 @@ func main() {
 		return
 	}
 
+	startTimer()
 	routes := map[string]knot.FnContent{
 		"/": func(r *knot.WebContext) interface{} {
 			// do something when / is accessed

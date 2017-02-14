@@ -145,10 +145,10 @@ div.k-grid-header > div > table > thead > tr:nth-child(1) > th  {
 			<div class="panel-body" style="margin-top: -63px">
 				<div class="col-md-12" style="margin-bottom: 2%;">
           <div style="padding-left: 30px;">
-            <button class="btn btn-sm btn-confirm separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="intrtr.getConfirmed(1, false)" data-bind="visible: (intrtr.status() == 0)">Confirm</button>
-            <button button class="btn btn-sm btn-confirm separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="intrtr.getConfirmed(0, false)" data-bind="visible: (intrtr.status() == 1)">Re Enter</button>
-            <button class="btn btn-sm btn-freeze separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="intrtr.getFreeze(1, true)" data-bind="visible: !(intrtr.isFreeze())">Freeze</button>
-             <button class="btn btn-sm btn-danger separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="intrtr.getFreeze(1, false)"  data-bind="visible:(intrtr.isFreeze() == true)">Unfreeze</button>
+            <button class="btn btn-sm btn-confirm separator confirm-userrights" style="margin-right: inherit;" onclick="intrtr.getConfirmed(1, false)" data-bind="visible: (intrtr.status() == 0)">Confirm</button>
+            <button button class="btn btn-sm btn-confirm separator re-enter-userrights" style="margin-right: inherit;" onclick="intrtr.getConfirmed(0, false)" data-bind="visible: (intrtr.status() == 1)">Re Enter</button>
+            <button class="btn btn-sm btn-freeze separator freeze-userrights" style="margin-right: inherit;" onclick="intrtr.getFreeze(1, true)" data-bind="visible: !(intrtr.isFreeze())">Freeze</button>
+             <button class="btn btn-sm btn-danger separator unfreeze-userrights" style="margin-right: inherit;" onclick="intrtr.getFreeze(1, false)"  data-bind="visible:(intrtr.isFreeze() == true)">Unfreeze</button>
           </div>
         </div>
         <div class="clearfix"></div>

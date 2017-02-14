@@ -115,10 +115,10 @@ model.Fullname = ko.observable('{{.Fullname}}');
             <div class="col-md-8" style="margin-left: -25px;"><input type="text" id="bankstt" class="form-control input-sm banksdata-action" validationmessage="Bank Stt Till required" data-bind="value: bankaccount.bankstttill"></div>
           </div>
           <button type="button" id="add" style="margin-left: -39px;" class="btn btn-add btn-sm btn-flat mgright banksdata-action">Add Bank Data</button> -->
-          <button id="bconfirm" class="btn btn-sm btn-confirm separator ontop" style="margin-right: inherit;" data-bind="text: statusPage.confirmText, enable: (!statusPage.isFreeze())">
+          <button id="bconfirm" class="btn btn-sm btn-confirm separator ontop re-enter-userrights" style="margin-right: inherit;" data-bind="text: statusPage.confirmText, enable: (!statusPage.isFreeze())">
             <span></span>
           </button>
-          <button class="btn btn-sm btn-freeze separator" data-bind="text: statusPage.freezeText,visible: (unfreeze() == false), css: checkBtnFreeze" style="margin-right: inherit;" onclick="onFreeze()">
+          <button class="btn btn-sm btn-freeze separator freeze-userrights" data-bind="text: statusPage.freezeText,visible: (unfreeze() == false), css: checkBtnFreeze" style="margin-right: inherit;" onclick="onFreeze()">
           </button>
           <!-- <button class="btn btn-sm btn-unfreeze separator" id="unf" data-bind="visible: (unfreeze() == true)" style="margin-right: inherit;" onclick="setUnFreeze()">
             Unfreeze
@@ -170,22 +170,22 @@ model.Fullname = ko.observable('{{.Fullname}}');
             <div class="col-md-7"><input type="text" id="bankstt" class="form-control input-sm banksdata-action" validationmessage="Bank Stt Till required" data-bind="value: bankaccount.bankstttill"></div>
           </div>
           <div class="col-md-4">
-            <button type="button"  id="add" class="btn btn-add btn-sm btn-flat mgright banksdata-action add-userrights confirm-userrights" data-backdrop="static" data-keyboard="false">Add Bank Data</button>
+            <button type="button"  id="add" class="btn btn-add btn-sm btn-flat mgright banksdata-action adddatabank-userrights" data-backdrop="static" data-keyboard="false">Add Bank Data</button>
           </div>
           </div>
         </div>
       </div>
 
       <div class="panel-body" data-bind="visible:(databank().length > 0 )">
-        <button type="button" style="display: none" data-bind="attr:{id:'bedit0'},click: editBankData(0),visible:(isempty() != true)"  class="btn btn-warning banksdata-action"  data-target="#modalAdd" data-toggle="modal" data-backdrop="static" data-keyboard="false">Edit</button>
-        <button type="button" style="display: none" data-bind="attr:{id:'bdelete0'},click: deleteBankData(0),visible:(isempty() != true)"  class="btn btn-danger">Delete</button>
+        <button type="button" style="display: none" data-bind="attr:{id:'bedit0'},click: editBankData(0),visible:(isempty() != true)"  class="btn btn-warning banksdata-action editdatabank-userrights"  data-target="#modalAdd" data-toggle="modal" data-backdrop="static" data-keyboard="false">Edit</button>
+        <button type="button" style="display: none" data-bind="attr:{id:'bdelete0'},click: deleteBankData(0),visible:(isempty() != true)"  class="btn btn-danger deletedatabank-userrights">Delete</button>
       </div>
       <div data-bind="visible:(isempty() != true)">
         <div class="panel-body" data-bind="foreach:databank"   style="margin-top: -34px;">
           <div class="clearfix"></div>
             <div >
-              <button type="button" data-bind="visible: ($index() > 0),attr:{id:'bedit'+$index()} ,click: editBankData($index())" style="margin-right: 3px;" class="btn btn-warning mgright pull-left banksdata-action">Edit</button>
-              <button type="button" data-bind="visible: ($index() > 0),attr:{id:'bdelete'+$index()} ,click: deleteBankData($index())" class="btn btn-danger mgright pull-left">Delete</button>
+              <button type="button" data-bind="visible: ($index() > 0),attr:{id:'bedit'+$index()} ,click: editBankData($index())" style="margin-right: 3px;" class="btn btn-warning mgright pull-left banksdata-action editdatabank-userrights">Edit</button>
+              <button type="button" data-bind="visible: ($index() > 0),attr:{id:'bdelete'+$index()} ,click: deleteBankData($index())" class="btn btn-danger mgright pull-left deletedatabank-userrights">Delete</button>
               <!--<button type="button" data-bind="visible:false,attr:{id:'update'+$index()},click: updateDataBank($index())" class="btn btn-primary mgright pull-right saveupdate banksdata-action">Update</button>-->
             </div>
             <div>

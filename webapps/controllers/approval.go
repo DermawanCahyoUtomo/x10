@@ -186,7 +186,12 @@ func (c *ApprovalController) GetDCAndCreditAnalysDraft(k *knot.WebContext) inter
 		//return CreateResult(false, nil, err.Error())
 	}
 
-	return []tk.M{{"CreditAnalys": resultCredit}, {"DCFinalSanction": resultDC}}
+	resultCreditFix, err := modelCredit.Get(customerId, dealNo, "")
+	if err != nil {
+		//return CreateResult(false, nil, err.Error())
+	}
+
+	return []tk.M{{"CreditAnalys": resultCredit}, {"DCFinalSanction": resultDC}, {"CreditAnalysFix": resultCreditFix}}
 }
 
 func (c *ApprovalController) SaveCreditAnalys(k *knot.WebContext) interface{} {
@@ -210,9 +215,10 @@ func (c *ApprovalController) SaveCreditAnalys(k *knot.WebContext) interface{} {
 	}
 
 	if datas.Status == 1 {
-		err = updateDealSetupLatestData(strconv.Itoa(datas.Ca.CustomerId), datas.Ca.DealNo, "ds", "Decision Committee Action Awaited")
+		err = UpdateDealSetup(strconv.Itoa(datas.Ca.CustomerId), datas.Ca.DealNo, "ds", "Decision Committee Action Awaited")
 		if err != nil {
-			return CreateResult(false, nil, err.Error())
+			c.WriteLog(err.Error())
+			// return CreateResult(false, nil, err.Error())
 		}
 
 		DC := NewDCFinalSanctionModel()
@@ -222,10 +228,11 @@ func (c *ApprovalController) SaveCreditAnalys(k *knot.WebContext) interface{} {
 		if err != nil {
 			// return CreateResult(false, nil, err.Error())
 		} else {
-			DCResult.LatestStatus = ""
+			DCResult.LatestStatus = "Awaiting Action"
 
 			err = DC.Update(DCResult)
 			if err != nil {
+				c.WriteLog(err)
 				return CreateResult(false, nil, err.Error())
 			}
 		}
@@ -266,6 +273,7 @@ func (c *ApprovalController) UpdateDateAndLatestValue(k *knot.WebContext) interf
 	model := NewDCFinalSanctionModel()
 	err = model.Update(datas)
 	if err != nil {
+		c.WriteLog("sarif")
 		return CreateResult(false, nil, err.Error())
 	}
 

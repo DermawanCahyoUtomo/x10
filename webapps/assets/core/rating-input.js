@@ -411,26 +411,26 @@ r.render = function () {
     	template: function (d) {
     		if (d.Type == 'Section') {
 	    		return [
-	        		"<button class='btn btn-xs btn-primary tooltipster' title='Move up' data-direction='up' onclick=\"r.moveSectionTo(this, '" + d.Name + "')\"><i class='fa fa-arrow-up'></i></button>",
-	        		"<button class='btn btn-xs btn-success tooltipster' title='Move down' data-direction='down' onclick=\"r.moveSectionTo(this, '" + d.Name + "')\"><i class='fa fa-arrow-down'></i></button>",
+	        		"<button class='btn btn-xs btn-primary tooltipster moveup-userrights' title='Move up' data-direction='up' onclick=\"r.moveSectionTo(this, '" + d.Name + "')\"><i class='fa fa-arrow-up'></i></button>",
+	        		"<button class='btn btn-xs btn-success tooltipster movedown-userrights' title='Move down' data-direction='down' onclick=\"r.moveSectionTo(this, '" + d.Name + "')\"><i class='fa fa-arrow-down'></i></button>",
 	        		// "<button class='btn btn-xs btn-primary tooltipster' title='Edit' onclick=\"r.edit(this, '" + d.id + "')\"><i class='fa fa-edit'></i></button>",
-	        		"<button class='btn btn-xs btn-danger tooltipster' title='Remove' onclick=\"r.remove(this, '" + d.id + "', '"+d.Name+"', '')\"><i class='fa fa-trash'></i></button>",
+	        		"<button class='btn btn-xs btn-danger tooltipster delete-userrights' title='Remove' onclick=\"r.remove(this, '" + d.id + "', '"+d.Name+"', '')\"><i class='fa fa-trash'></i></button>",
 	        	].join('&nbsp;')
     		}
 
     		if (d.Type == 'Sub Section') {
 	    		return [
-	        		"<button class='btn btn-xs btn-primary tooltipster' title='Move up' data-direction='up' onclick=\"r.moveSubSectionTo(this, '" + d.ParentName + "', '" + d.Name + "')\"><i class='fa fa-arrow-up'></i></button>",
-	        		"<button class='btn btn-xs btn-success tooltipster' title='Move down' data-direction='down' onclick=\"r.moveSubSectionTo(this, '" + d.ParentName + "', '" + d.Name + "')\"><i class='fa fa-arrow-down'></i></button>",
-	        		"<button class='btn btn-xs btn-primary tooltipster' title='Edit' onclick=\"r.edit(this, '" + d.Name + "')\"><i class='fa fa-edit'></i></button>",
-	        		"<button class='btn btn-xs btn-danger tooltipster' title='Remove' onclick=\"r.remove(this, '" + d.id + "', '"+d.ParentName+"','"+d.Name+"')\"><i class='fa fa-trash'></i></button>",
+	        		"<button class='btn btn-xs btn-primary tooltipster moveup-userrights' title='Move up' data-direction='up' onclick=\"r.moveSubSectionTo(this, '" + d.ParentName + "', '" + d.Name + "')\"><i class='fa fa-arrow-up'></i></button>",
+	        		"<button class='btn btn-xs btn-success tooltipster movedown-userrights' title='Move down' data-direction='down' onclick=\"r.moveSubSectionTo(this, '" + d.ParentName + "', '" + d.Name + "')\"><i class='fa fa-arrow-down'></i></button>",
+	        		"<button class='btn btn-xs btn-primary tooltipster edit-userrights' title='Edit' onclick=\"r.edit(this, '" + d.Name + "')\"><i class='fa fa-edit'></i></button>",
+	        		"<button class='btn btn-xs btn-danger tooltipster delete-userrights' title='Remove' onclick=\"r.remove(this, '" + d.id + "', '"+d.ParentName+"','"+d.Name+"')\"><i class='fa fa-trash'></i></button>",
 	        	].join('&nbsp;')
     		}
 
     		if (d.Type == 'Field') {
 	    		return [
-	        		"<button class='btn btn-xs btn-primary tooltipster' title='Move up' data-direction='up' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-up'></i></button>",
-	        		"<button class='btn btn-xs btn-success tooltipster' title='Move down' data-direction='down' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-down'></i></button>",
+	        		"<button class='btn btn-xs btn-primary tooltipster moveup-userrights' title='Move up' data-direction='up' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-up'></i></button>",
+	        		"<button class='btn btn-xs btn-success tooltipster movedown-userrights' title='Move down' data-direction='down' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-down'></i></button>",
 	        		// "&nbsp;",
 	        		// "<button class='btn btn-xs btn-warning tooltipster' title='Show History' onclick=\"r.getFilledFields(this, '" + d.id + "')\"><i class='fa fa-history'></i></button>",
 	        		// "&nbsp;",
@@ -826,8 +826,8 @@ r.renderMain = function (data) {
 			attributes: { style: 'text-align: center;' },
 			template: function (d) {
 				return [
-					'<button class="btn btn-xs btn-confirm" onclick="r.openRating(\'' + d.Id + '\')"><i class="fa fa-eye"></i> Open</button>',
-					'<button class="btn btn-xs btn-reset" onclick="r.deleteRating(\'' + d.Id + '\')"><i class="fa fa-trash"></i> Delete</button>',
+					'<button class="btn btn-xs btn-confirm open-userrights" onclick="r.openRating(\'' + d.Id + '\')"><i class="fa fa-eye"></i> Open</button>',
+					'<button class="btn btn-xs btn-reset delete-userrights" onclick="r.deleteRating(\'' + d.Id + '\')"><i class="fa fa-trash"></i> Delete</button>',
 				].join('&nbsp;')
 			}
 		}]

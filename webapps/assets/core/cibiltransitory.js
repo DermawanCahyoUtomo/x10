@@ -114,7 +114,7 @@ trans.RenderGrid = function(){
 			width : 100
 		}, {
 		 	template : function(x){
-		 		return "<button class='btn btn-xs btn-primary add-userrights confirm-userrights tooltipster' onclick='trans.showProm(\""+ x.Id + "\")'><i class='fa fa-edit'></i></button>"
+		 		return "<button class='btn btn-xs btn-primary edit-userrights tooltipster' onclick='trans.showProm(\""+ x.Id + "\")'><i class='fa fa-edit'></i></button>"
 		 	},
 		 	width : 50,
 		 	     headerAttributes: { class: 'k-header header-bgcolor' },

@@ -994,14 +994,14 @@ input[disabled]{
           <div class="panel-body btnFixed static">
             <div class="panel-nav-button " >
               <!-- <button  type="button" id="ceedit" btn-sm class="btn btn-sm btn-success" onclick="disableedit()">Cancel Edit</button> -->
-              <button  type="button" id="save" btn-sm class="btn btn-sm btn-save add-userrights confirm-userrights" data-bind="visible: (edit() != true)" onclick="save1()">Save</button>
-              <button  type="button" id="edit" btn-sm class="btn btn-sm btn-save add-userrights confirm-userrights" onclick="enableedit()"> Edit</button>
-               <button  type="button" id="cf" btn-sm class="btn btn-sm btn-confirm add-userrights confirm-userrights" onclick="confirmorverify(1)">Confirm</button>
-               <button  type="button" id="re" btn-sm class="btn btn-sm btn-confirm add-userrights confirm-userrights" onclick="confirmorverify(0)">Re-Enter</button>
-               <button  type="button" id="vf" btn-sm class="btn btn-sm btn-freeze add-userrights confirm-userrights" onclick="confirmorverify(2)">Freeze</button>
-               <button  type="button" id="uvf" btn-sm class="btn btn-sm btn-unfreeze add-userrights confirm-userrights" onclick="confirmorverify(1)">Unfreeze</button>
+              <button  type="button" id="save" btn-sm class="btn btn-sm btn-save save-userrights" data-bind="visible: (edit() != true)" onclick="save1()">Save</button>
+              <button  type="button" id="edit" btn-sm class="btn btn-sm btn-save edit-userrights" onclick="enableedit()"> Edit</button>
+               <button  type="button" id="cf" btn-sm class="btn btn-sm btn-confirm confirm-userrights" onclick="confirmorverify(1)">Confirm</button>
+               <button  type="button" id="re" btn-sm class="btn btn-sm btn-confirm re-enter-userrights" onclick="confirmorverify(0)">Re-Enter</button>
+               <button  type="button" id="vf" btn-sm class="btn btn-sm btn-freeze freeze-userrights" onclick="confirmorverify(2)">Freeze</button>
+               <button  type="button" id="uvf" btn-sm class="btn btn-sm btn-unfreeze unfreeze-userrights" onclick="confirmorverify(1)">Unfreeze</button>
                <!-- <button type="button" btn-sm class="btn btn-sm btn-default" > View All</button> -->
-               <button  type="button" id="pdf" btn-sm class="btn btn-sm btn-primary add-userrights confirm-userrights" onclick="exportPDF();">Download as PDF</button>
+               <button  type="button" id="pdf" btn-sm class="btn btn-sm btn-primary download-pdf-userrights" onclick="exportPDF();">Download as PDF</button>
               <!-- <button  id="pdf" class="btn-pdf" onclick="exportPDF();"><span></span></button> -->
               <span class="form-last-confirmation-info pull-right"></span>
             </div>
@@ -1021,7 +1021,7 @@ input[disabled]{
             <div class="collapsible-noreplace active"><i class="fa fa-list"></i>Applicant Details<i class="fa fa-chevron-down pull-right"></i></div>
             <div class="collapsible-body row">
               <div class="col-sm-12 btnsave">
-                <span class="pull-right"><button class="btn btn-save btn-sm" onclick="save()">Save</button></span>
+                <span class="pull-right"><button class="btn btn-save btn-sm save-userrights" onclick="save()">Save</button></span>
               </div>
               <div class="col-sm-12">
                 {{template "detailforapplicant.html"}}
@@ -1049,7 +1049,7 @@ input[disabled]{
                  <div class="collapsible-noreplace active"><i class="fa fa-list"></i>Non-Refundable Processing Fee Details<i class="fa fa-chevron-down pull-right"></i></div>
             <div class="collapsible-body row">
               <div class="col-sm-12 btnsave">
-                <span class="pull-right"><button class="btn btn-warning btn-sm" onclick="save()">Save</button></span>
+                <span class="pull-right"><button class="btn btn-warning btn-sm save-userrights" onclick="save()">Save</button></span>
               </div>
               <div class="col-sm-12">
                 {{template "nonrefundableprocessingfeesdetails.html"}}
@@ -1063,7 +1063,7 @@ input[disabled]{
                  <div class="collapsible-noreplace active"><i class="fa fa-list"></i>Details of Promoters/Directors/Guarantors/Management<i class="fa fa-chevron-down pull-right"></i></div>
             <div class="collapsible-body row">
               <div class="col-sm-12 btnsave">
-                <span class="pull-right"><button class="btn btn-warning btn-sm" onclick="save()">Save</button></span>
+                <span class="pull-right"><button class="btn btn-warning save-userrights btn-sm" onclick="save()">Save</button></span>
               </div>
                 <div class="col-sm-12">
                 {{template "detailsofpromotersdirectorsguarantors.html"}}

@@ -192,13 +192,13 @@ r.render = function () {
 	            	}
 
 	            	return [
-	            		"<button class='btn btn-xs btn-primary tooltipster' title='Move up' data-direction='up' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-up'></i></button>",
-	            		"<button class='btn btn-xs btn-success tooltipster' title='Move down' data-direction='down' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-down'></i></button>",
+	            		"<button class='btn btn-xs btn-primary tooltipster moveup-userrights' title='Move up' data-direction='up' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-up'></i></button>",
+	            		"<button class='btn btn-xs btn-success tooltipster movedown-userrights' title='Move down' data-direction='down' onclick=\"r.moveTo(this, '" + d.id + "')\"><i class='fa fa-arrow-down'></i></button>",
 	            		"&nbsp;",
-	            		"<button class='btn btn-xs btn-warning tooltipster' title='Show History' onclick=\"r.getFilledFields(this, '" + d.id + "')\"><i class='fa fa-history'></i></button>",
+	            		"<button class='btn btn-xs btn-warning tooltipster history-userrights' title='Show History' onclick=\"r.getFilledFields(this, '" + d.id + "')\"><i class='fa fa-history'></i></button>",
 	            		"&nbsp;",
-	            		"<button class='btn btn-xs btn-primary tooltipster' title='Edit' onclick=\"r.edit(this, '" + d.id + "')\"><i class='fa fa-edit'></i></button>",
-	            		"<button class='btn btn-xs btn-danger tooltipster' title='Remove' onclick=\"r.remove(this, '" + d.id + "')\"><i class='fa fa-trash'></i></button>",
+	            		"<button class='btn btn-xs btn-primary tooltipster edit-userrights' title='Edit' onclick=\"r.edit(this, '" + d.id + "')\"><i class='fa fa-edit'></i></button>",
+	            		"<button class='btn btn-xs btn-danger tooltipster remove-userrights' title='Remove' onclick=\"r.remove(this, '" + d.id + "')\"><i class='fa fa-trash'></i></button>",
 	            	].join('&nbsp;')
 	            }, attributes: { class: 'align-center' }, width: 170 
 	        },

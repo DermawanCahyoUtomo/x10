@@ -93,8 +93,8 @@ frl.renderGrid = function(){
                     headerAttributes: {class: 'k-header header-bgcolor'},
                     template: function(d){
                     	return [
-                    	"<button class='btn btn-xs btn-primary add-userrights confirm-userrights tooltipster' title='Download File' onclick='frl.download(\""+d.NameFile+"\")'><i class='fa fa-download'></i></button>",
-                    	"<button class='btn btn-xs btn-success add-userrights confirm-userrights tooltipster' title='Open File' onclick='frl.openLink(\""+d.NameFile+"\")'><i class='fa fa-folder-open-o'></i></button>",
+                    	"<button class='btn btn-xs btn-primary download-userrights tooltipster' title='Download File' onclick='frl.download(\""+d.NameFile+"\")'><i class='fa fa-download'></i></button>",
+                    	"<button class='btn btn-xs btn-success open-userrights tooltipster' title='Open File' onclick='frl.openLink(\""+d.NameFile+"\")'><i class='fa fa-folder-open-o'></i></button>",
                     	].join(' ')
                     }
                 },

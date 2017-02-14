@@ -160,8 +160,8 @@ model.Fullname = ko.observable('{{.Fullname}}');
                       <a href="#" class="comment-a">
                       <img class="btn-comment img-responsives no-margin" style="height: 33px !important;" data-bind="click:cibil.ShowComment" src="/static/img/user_comment.png" >
                       </a>
-                      <button class="btn btn-sm btn-confirm btn-disabled1 add-userrights confirm-userrights" onclick="updateConfirmCibil()" data-bind="text: ConfirmText, enable: (cibil.cibilStatus() == 1 && cibil.cibilStatusDraft() == 1)"></button>
-                      <button class="btn btn-sm btn-freeze add-userrights confirm-userrights" data-bind="text: FreezeText, click:cibil.eventfreeze">Freeze</button>
+                      <button class="btn btn-sm btn-confirm btn-disabled1 re-enter-userrights" onclick="updateConfirmCibil()" data-bind="text: ConfirmText, enable: (cibil.cibilStatus() == 1 && cibil.cibilStatusDraft() == 1)"></button>
+                      <button class="btn btn-sm btn-freeze freeze-userrights" data-bind="text: FreezeText, click:cibil.eventfreeze">Freeze</button>
                     </div>
                     <div class="col-md-6" style="text-align: right;"><span class="confirmdate"></span></div>
                     <!-- <div class="col-md-1"></div> -->

@@ -331,8 +331,8 @@ model.Fullname = ko.observable('{{.Fullname}}');
                   {{template "realestateposition.html"}}
 
                   <div class="footer clearfix">
-                    <button onClick="r.showDetails('pmdb')" class="btn btn-sm btn-space btn-footer col-sm-3 col-sm-offset-3">Show More Details</button>
-                    <button data-bind="click: r.openFull" class="btn btn-sm btn-flat btn-space btn-footer col-sm-3">Open Form</button>
+                    <button onClick="r.showDetails('pmdb')" class="btn btn-sm btn-space btn-footer col-sm-3 col-sm-offset-3 showmore-userrights">Show More Details</button>
+                    <button data-bind="click: r.openFull" class="btn btn-sm btn-flat btn-space btn-footer col-sm-3 openform-userrights">Open Form</button>
                   </div>
               </div>
 
@@ -361,7 +361,7 @@ model.Fullname = ko.observable('{{.Fullname}}');
             <div id="tabstrip">
                 <ul>
                     <li class="k-state-active">
-                        Decision Committee Final Sanction
+                        Decision Committee Sanction
                     </li>
                     <li>
                         Credit Analyst Comments

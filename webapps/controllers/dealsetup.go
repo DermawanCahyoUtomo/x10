@@ -729,7 +729,7 @@ func updateDealSetupLatestData(cid string, dealno string, formname string, forms
 	}
 
 	if len(results) == 0 {
-		return errors.New("Data not found")
+		return errors.New("Data Deal Set-up not found")
 	}
 
 	result := results[len(results)-1]
@@ -851,7 +851,7 @@ func updateDealSetupLatestData(cid string, dealno string, formname string, forms
 
 }
 
-var ErrorDataNotFound = errors.New("Data Deal Setup Not Found")
+var ErrorDataNotFound = errors.New("Data Deal Set-up Not Found")
 
 func UpdateDealSetup(cid string, dealno string, formname string, formstatus string) error {
 

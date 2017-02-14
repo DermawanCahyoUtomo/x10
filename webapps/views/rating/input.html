@@ -92,8 +92,8 @@ model.Fullname= ko.observable('{{.Fullname}}');
 		<div class="panel ez">
 			<div class="panel-body">
 				<div class="filter col-md-12 no-padding hardcore align-right">
-					<button class="btn btn-sm btn-confirm add-userrights confirm-userrights" data-bind="click: r.newRatingModel">New Rating Model</button>
-					<button class="btn btn-sm btn-freeze add-userrights confirm-userrights" data-bind="click: r.refreshMain">Refresh</button>
+					<button class="btn btn-sm btn-confirm newrating-userrights" data-bind="click: r.newRatingModel">New Rating Model</button>
+					<button class="btn btn-sm btn-freeze refresh-userrights" data-bind="click: r.refreshMain">Refresh</button>
 				</div>
 				<div class="clearfix"></div>
 				<div style="padding-top: 10px;">
@@ -109,11 +109,11 @@ model.Fullname= ko.observable('{{.Fullname}}');
 		<div class="panel ez">
 			<div class="panel-body">
 				<div class="filter col-md-12 no-padding hardcore align-right">
-					<button class="btn btn-sm btn-reset add-userrights confirm-userrights" data-bind="click: r.backToMain"><i class="fa fa-arrow-left"></i> Back</button>
-					<button class="btn btn-sm btn-add add-userrights confirm-userrights" data-bind="click: r.showFormAdd">Add New</button>
-					<button class="btn btn-sm btn-freeze add-userrights confirm-userrights" data-bind="click: r.refresh">Refresh</button>
-					<button class="btn btn-sm btn-save add-userrights confirm-userrights" data-bind="click: r.save">Save Changes</button>
-					<button class="btn btn-sm btn-confirm add-userrights confirm-userrights" data-bind="click: r.expandfunction">Expand/Collapse all</button>
+					<button class="btn btn-sm btn-reset back-userrights" data-bind="click: r.backToMain"><i class="fa fa-arrow-left"></i> Back</button>
+					<button class="btn btn-sm btn-add add-userrights" data-bind="click: r.showFormAdd">Add New</button>
+					<button class="btn btn-sm btn-freeze refresh-userrights" data-bind="click: r.refresh">Refresh</button>
+					<button class="btn btn-sm btn-save save-userrights" data-bind="click: r.save">Save Changes</button>
+					<button class="btn btn-sm btn-confirm expancolapse-userrights" data-bind="click: r.expandfunction">Expand/Collapse all</button>
 					<!-- <a class="btn btn-sm btn-primary" target="_blank" href="/ratio/input">
 						<i class="fa fa-eye"></i> View Result
 					</a> -->
@@ -236,7 +236,7 @@ model.Fullname= ko.observable('{{.Fullname}}');
 					        <div class="col-md-6">
 					          <label class="col-sm-4 form-label align-right">Categories</label>
 					        	<div class="col-sm-6">
-					        		<button type="button" data-bind="enable: !r.dropDownMode()" class="btn btn-success btn-sm" onclick="addcategorymen()">Add Category</button><br><br>
+					        		<button type="button" data-bind="enable: !r.dropDownMode()" class="btn btn-success btn-sm add-userrights" onclick="addcategorymen()">Add Category</button><br><br>
 				        	<!-- 		<div class="col-xs-12" style="padding: 0">
 					        			<div class="col-xs-9" style="padding: 0">
 					        				<input type="text" class="form-control input-sm" placeholder="Type categories name here" required data-bind="value: Categories" />

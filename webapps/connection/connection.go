@@ -80,21 +80,22 @@ func GetConnection() (dbox.IConnection, error) {
 func ReadConfig() map[string]string {
 	ret := make(map[string]string)
 	file, err := os.Open(wd + "conf/app.conf")
-	if err == nil {
-		defer file.Close()
-
-		reader := bufio.NewReader(file)
-		for {
-			line, _, e := reader.ReadLine()
-			if e != nil {
-				break
-			}
-
-			sval := strings.Split(string(line), "=")
-			ret[sval[0]] = sval[1]
-		}
-	} else {
+	if err != nil {
 		log.Println(err.Error())
+		return ret
+	}
+
+	defer file.Close()
+
+	reader := bufio.NewReader(file)
+	for {
+		line, _, e := reader.ReadLine()
+		if e != nil {
+			break
+		}
+
+		sval := strings.Split(string(line), "=")
+		ret[sval[0]] = sval[1]
 	}
 
 	return ret

@@ -5,7 +5,7 @@
     <tr class="jancok">
       <td style="font-weight: bold;">Min. Score :</td>
       <td style="max-width: 78px;"> <input type="text" class="form-control text-right" data-bind="value: minScore" readonly></td>
-      <td style="width:100%;"><button class="btn btn-primary form-control confirmPromotor btn-disabled" style="width: 100px; float: right; margin-right: 10px;" onclick="updateConfirmPromotors(1)">Confirm</button><button class="btn btn-danger form-control unConfirmPromotor btn-disabled" style="width: 100px; float: right; margin-right: 10px;" onclick="updateConfirmPromotors(0)">Update</button></td>
+      <td style="width:100%;"><button class="btn btn-primary form-control confirmPromotor btn-disabled confirm-userrights" style="width: 100px; float: right; margin-right: 10px;" onclick="updateConfirmPromotors(1)">Confirm</button><button class="btn btn-danger form-control unConfirmPromotor btn-disabled update-userrights" style="width: 100px; float: right; margin-right: 10px;" onclick="updateConfirmPromotors(0)">Update</button></td>
     </tr>
   </table>
     <!-- <div class="spacer"></div> -->
@@ -40,8 +40,8 @@
                 <td class="text-center"><span data-bind="text: Name"></span><br>(<span data-bind="text: promotorText"></span>)</td>
                 <td><input type="text" class="form-control input-sm text-right" data-bind="value: CIBILScore" readonly/></td>
                 <td class="text-center">
-                  <button class="btn btn-sm btn-danger tooltipster-prom" title="Open CIBIL File" data-bind="click: openreportsGuarantor(FileName)"><i class="fa fa-file-pdf-o"></i></button>
-                  <button class="btn btn-sm btn-details tooltipster-sd" title="Show Detail" data-bind="click: checkShowHideGuarantor($index())"><i class="fa fa-list"></i></button>
+                  <button class="btn btn-sm btn-danger tooltipster-prom opencibil-file-userrights" title="Open CIBIL File" data-bind="click: openreportsGuarantor(FileName)"><i class="fa fa-file-pdf-o"></i></button>
+                  <button class="btn btn-sm btn-details tooltipster-sd show-detail-userrights" title="Show Detail" data-bind="click: checkShowHideGuarantor($index())"><i class="fa fa-list"></i></button>
                 </td>
               </tbody>
             </table>
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <button class="btn btn-sm btn-default tooltipster" style="width: 147px;" title="Show Promotor Details" data-bind="click: checkShowHide(2)"><i class="fa fa-list"></i> &nbsp; More...</button>
+        <button class="btn btn-sm btn-default tooltipster show-promotordetail-userrights" style="width: 147px;" title="Show Promotor Details" data-bind="click: checkShowHide(2)"><i class="fa fa-list"></i> &nbsp; More...</button>
       </div>
       <div class="col-md-3"></div>
     </div>

@@ -449,7 +449,7 @@ function getData(callback){
         col.push({ title : "Yearly Repayment (Rs Lacs)", headerAttributes: { "class": "header-bgcolor wrap" }, field : "YearlyRepayment", width: 160, template : "<label style=\"width:100%; text-align: right;\">#:app.formatnum(YearlyRepayment,2)#</label>", attributes: { style: 'background: rgb(238, 238, 238)' }})
 
 
-        col.push({ headerAttributes: { "class": "header-bgcolor wrap" }, template : "<button type='button' btn-sm='' class='btn btn-sm btn-danger del tooltipster' title='Delete' onclick='DeleteData(\"#: Id #\");'> <span class='glyphicon glyphicon-trash'></span>&nbsp; </button>", width: 50 })
+        col.push({ headerAttributes: { "class": "header-bgcolor wrap" }, template : "<button type='button' btn-sm='' class='btn btn-sm btn-danger del tooltipster remove-userrights ' title='Delete' onclick='DeleteData(\"#: Id #\");'> <span class='glyphicon glyphicon-trash'></span>&nbsp; </button>", width: 50 })
 
         NewestData(datagrid);
 
@@ -751,13 +751,13 @@ function CreateBottomGrid(cust, deal, data, col){
         $('.btn-danger').show()
     }
 
-    $(".k-grid-cancel-changes").attr("class","btn btn-sm btn-danger k-grid-cancel-changes mgright pull-left add-userrights confirm-userrights");
+    $(".k-grid-cancel-changes").attr("class","btn btn-sm btn-danger k-grid-cancel-changes mgright pull-left cancel-userrights");
     $(".k-grid-cancel-changes").text("Cancel");
 
     // $(".k-grid-save-changes").attr("class","btn btn-sm .btn-save k-grid-save-changes mgright pull-left");
     // $(".k-grid-save-changes").text("Save");
 
-    $(".k-grid-add").attr("class","btn btn-sm btn-add k-grid-add mgright pull-left add-userrights confirm-userrights");
+    $(".k-grid-add").attr("class","btn btn-sm btn-add k-grid-add mgright pull-left add-userrights");
     $(".k-grid-add").text("Add");
 
 }

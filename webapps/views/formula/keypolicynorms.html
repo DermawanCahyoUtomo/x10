@@ -78,10 +78,10 @@ model.Fullname= ko.observable('{{.Fullname}}');
 		<!-- 	<div class="panel-heading"><h4 data-bind="html: model.currentTitle()" style="margin-top: 4px">&nbsp;</h4></div> -->
 			<div class="panel-body" >
 				<div class="controls" style="text-align: right;">
-					<button class="btn btn-sm btn-freeze add-userrights confirm-userrights" data-bind="text: formula.freezeText, click: formula.setFreeze, css: checkBtnFreeze" style="margin-right: inherit;">
+					<button class="btn btn-sm btn-freeze freeze-userrights" data-bind="text: formula.freezeText, click: formula.setFreeze, css: checkBtnFreeze" style="margin-right: inherit;">
           </button>
-					<button class="btn btn-sm btn-primary add-userrights confirm-userrights" data-bind="click: formula.showModalFinancial">Add New</button>
-					<button class="btn btn-sm btn-primary add-userrights confirm-userrights" data-bind="click: formula.refresh">Refresh</button>
+					<button class="btn btn-sm btn-primary add-userrights" data-bind="click: formula.showModalFinancial">Add New</button>
+					<button class="btn btn-sm btn-primary refresh-userrights" data-bind="click: formula.refresh">Refresh</button>
 				</div>
 
 				<div class="form-container" style="padding-top: 10px;">

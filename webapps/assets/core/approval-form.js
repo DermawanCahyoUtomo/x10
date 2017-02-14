@@ -328,7 +328,7 @@ refreshFilter = function(){
     startme();
 
     getComments("draft");
-    console.log("))))))))))", res)
+    // console.log("))))))))))", res)
     if(res.Data.AD.length > 0) {
       loanapproval.marketref(res.Data.AD[0].borrowerdetails.marketreference);
       createreferencecheckgrid(res.Data.AD[0].borrowerdetails.refrencecheck);

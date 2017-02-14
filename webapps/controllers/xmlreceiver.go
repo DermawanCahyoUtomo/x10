@@ -225,34 +225,9 @@ func (c *XMLReceiverController) GetOmnifinData(r *knot.WebContext) interface{} {
 	LogData.Set("xmlstring", string(bs))
 	CreateLog(LogData)
 
-	// Source xml is not escaped
-	xmlstr := strings.NewReader(CleaningXMLText(string(bs)))
-
-	// Convert to JSON
-	// TODO: Probably simplify this routine
-	resjson, err := xmlToJson(xmlstr)
-	if err != nil {
-		LogData.Set("error", err.Error())
-		CreateLog(LogData)
-		return resFail
-	}
-
-	var msg interface{}
-	err = json.Unmarshal([]byte(resjson.String()), &msg)
-	if err != nil {
-		LogData.Set("error", err.Error())
-		CreateLog(LogData)
-		return resFail
-	}
-
-	msgMap, ok := msg.(map[string]interface{})
-	if !ok {
-		LogData.Set("error", "Unknown Error")
-		CreateLog(LogData)
-		return resFail
-	}
-
-	LogData.Set("xmltkm", msgMap)
+	content := tk.M{}
+	err := json.Unmarshal(bs, &content)
+	LogData.Set("xmltkm", content)
 	CreateLog(LogData)
 
 	if err != nil {
@@ -263,8 +238,13 @@ func (c *XMLReceiverController) GetOmnifinData(r *knot.WebContext) interface{} {
 	}
 	// Decode done
 
-	// Some data scrambling
-	content := tk.M(msgMap)
+	//
+	// out, err := json.Marshal(content)
+	// if err != nil {
+	// 	return resFail
+	// }
+	// tk.Println(string(out))
+	//
 	contentbody := tk.M(content.Get("crDealDtl").(map[string]interface{}))
 	crList := []tk.M{}
 	crL := contentbody.Get("crDealCustomerRoleList").([]interface{})

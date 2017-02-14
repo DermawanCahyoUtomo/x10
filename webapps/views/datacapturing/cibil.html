@@ -72,9 +72,9 @@ model.User= ko.observable('{{.Username}}');
 							<div class="panel-body">
 								<center>
 									<div class="row">
-										<button class="btn btn-flast btn-sm btn-details" data-bind="click: showDetail">Show More Details</button>
-										<button id="btnconfirm" class="btn btn-flast btn-sm btn-confirm" data-bind="text: textButtonDetail, click: confirmCompany"></button>
-										<button class="btn btn-flast btn-sm btn-freeze" data-bind="click: openreports">View Company CIBIL Report</button>
+										<button class="btn btn-flast btn-sm btn-details show-more-userrights" data-bind="click: showDetail">Show More Details</button>
+										<button id="btnconfirm" class="btn btn-flast btn-sm btn-confirm download-report-userrights" data-bind="text: textButtonDetail, click: confirmCompany"></button>
+										<button class="btn btn-flast btn-sm btn-freeze view-cibilreport-userrights" data-bind="click: openreports">View Company CIBIL Report</button>
 									</div>
 								</center>
 							</div>
@@ -85,8 +85,8 @@ model.User= ko.observable('{{.Username}}');
 					</div>
 					<div class="col-md-2 col-sm-2">
 						<div class="panel-body no-padding">
-							<div class="col-md-12"><button onclick="cibil.AccpetOrReject(3)" class="btn btn-flast btn-sm btn-success btn-confirmasi" style="width: 100%; margin-bottom: 6px;">Accept</button></div>
-							<div class="col-md-12"><button onclick="cibil.AccpetOrReject(-3)"  class="btn btn-flast btn-sm btn-danger btn-confirmasi" style="width: 100%; margin-bottom: 6px;">Reject</button></div>
+							<div class="col-md-12"><button onclick="cibil.AccpetOrReject(3)" class="btn btn-flast btn-sm btn-success btn-confirmasi accept-userrights" style="width: 100%; margin-bottom: 6px;">Accept</button></div>
+							<div class="col-md-12"><button onclick="cibil.AccpetOrReject(-3)"  class="btn btn-flast btn-sm btn-danger btn-confirmasi reject-userrights" style="width: 100%; margin-bottom: 6px;">Reject</button></div>
 						</div>
 					    <div class="panel ez no-padding hardcore nopad-left-right">
 							<div class="panel-heading no-padding">
@@ -105,9 +105,9 @@ model.User= ko.observable('{{.Username}}');
 									<div class="panel">
 										<div class="panel-body">
 											<div class="row">
-												<button class="btn btn-flast btn-sm btn-details" data-bind="click: showAllDetail">Show All Details</button>
-												<button id="btnconfirmall" data-bind="click:confirmAll" class="btn btn-flast btn-sm btn-confirm">Confirm All</button>
-												<button class="btn btn-flast btn-sm btn-freeze">View / Download All CIBIL Report</button>
+												<button class="btn btn-flast btn-sm btn-details show-detail-userrights" data-bind="click: showAllDetail">Show All Details</button>
+												<button id="btnconfirmall" data-bind="click:confirmAll" class="btn btn-flast btn-sm btn-confirm confirm-all-userrights">Confirm All</button>
+												<button class="btn btn-flast btn-sm btn-freeze download-allcibil-userrights">View / Download All CIBIL Report</button>
 											</div>
 										</div>
 									</div>

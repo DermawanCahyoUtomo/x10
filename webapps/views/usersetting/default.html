@@ -68,8 +68,8 @@ model.Fullname= ko.observable('{{.Fullname}}');
                 &nbsp;
             </h3>
             <div class="panel-nav-button" style="margin-right: 16px;">
-              <button  type="button" class="btn btn-sm btn-success btn-flat add-userrights confirm-userrights" data-bind="click:AddNew"><i class="fa fa-plus"> Add New</i></button>
-              <button class="btn btn-sm btn-info tooltipster add-userrights confirm-userrights" title="Toggle Advanced Filter" data-bind="click: toggleFilter"><i class="fa fa-server" data-bind="text:TitelFilter"></i></button>
+              <button  type="button" class="btn btn-sm btn-success btn-flat add-userrights" data-bind="click:AddNew"><i class="fa fa-plus"> Add New</i></button>
+              <button class="btn btn-sm btn-info tooltipster hidefilter-userrights" title="Toggle Advanced Filter" data-bind="click: toggleFilter"><i class="fa fa-server" data-bind="text:TitelFilter"></i></button>
             </div>
           </div>
           <div class="panel-body">
@@ -91,8 +91,8 @@ model.Fullname= ko.observable('{{.Fullname}}');
               <h3 class="no-margin">Filter</h3>
               <div class="panel-nav-button" style="margin-right: 16px;">
                   <div class="form-group relative align-right no-margin no-padding hardcore">
-                      <button  type="button" btn-sm class="btn btn-sm btn-primary add-userrights confirm-userrights btn-flat" data-bind="click:Search"><i class="fa fa-search"> Search</i></button>
-                      <button  type="button" class="btn btn-sm btn-danger add-userrights confirm-userrights btn-flat" data-bind="click:Reset"><i class="fa fa-refresh"> Reset</i></button>
+                      <button  type="button" btn-sm class="btn btn-sm btn-primary search-userrights btn-flat" data-bind="click:Search"><i class="fa fa-search"> Search</i></button>
+                      <button  type="button" class="btn btn-sm btn-danger reset-userrights btn-flat" data-bind="click:Reset"><i class="fa fa-refresh"> Reset</i></button>
                   </div>
               </div>
           </div>

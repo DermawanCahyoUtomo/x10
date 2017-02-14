@@ -41,12 +41,12 @@ model.Fullname= ko.observable('{{.Fullname}}');
                   Form Entry
                 </h3>
                 <div class="panel-nav-button" style="margin-right: 16px;">
-                    <button  data-bind="click:saveAppmenu, visible:saveData" id= "save" class="btn btn-sm btn-primary btn-flat" > <i class="fa fa-floppy-o"> Save</i></button>
+                    <button  data-bind="click:saveAppmenu, visible:saveData" id= "save" class="btn btn-sm btn-primary btn-flat save-userrights" > <i class="fa fa-floppy-o"> Save</i></button>
                     <span data-bind="visible: select">
-                        <button  data-bind="click:updateAppmenu, visible:updateData" id= "update" class="btn btn-sm btn-primary btn-flat" > <i class="fa fa-floppy-o"> Update</i></button>
-                        <button  data-bind="click:resetAppMenu" class="btn btn-sm btn-danger btn-flat"><i class="fa fa-refresh"> Reset</i></button>
+                        <button  data-bind="click:updateAppmenu, visible:updateData" id= "update" class="btn btn-sm btn-primary btn-flat update-userrights" > <i class="fa fa-floppy-o"> Update</i></button>
+                        <button  data-bind="click:resetAppMenu" class="btn btn-sm btn-danger btn-flat reset-userrights"><i class="fa fa-refresh"> Reset</i></button>
                     </span>
-                    <button class="btn btn-sm btn-success btn-flat add-userrights confirm-userrights" data-bind="click:newdataMenulist"><i class="fa fa-plus" data-bind="text:btnNewData"></i></button>
+                    <button class="btn btn-sm btn-success btn-flat add-userrights" data-bind="click:newdataMenulist"><i class="fa fa-plus" data-bind="text:btnNewData"></i></button>
                 </div>
             </div>
             <div class="panel-body" id="EntryForm">
@@ -111,8 +111,8 @@ model.Fullname= ko.observable('{{.Fullname}}');
                     Menu List
                 </h3>
                 <div class="panel-nav-button" data-bind="visible: select" style="margin-right: 16px;">
-                    <button class="btn btn-sm btn-primary  btn-flat" data-bind="click:editdataMenulist"><i class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></button>
-                    <button class="btn btn-sm btn-danger  btn-flat"  data-bind="click:deleteMunulist"><i class="fa fa-times" aria-hidden="true"> Remove</i></button>
+                    <button class="btn btn-sm btn-primary btn-flat edit-userrights" data-bind="click:editdataMenulist"><i class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></button>
+                    <button class="btn btn-sm btn-danger btn-flat remove-userrights"  data-bind="click:deleteMunulist"><i class="fa fa-times" aria-hidden="true"> Remove</i></button>
                 </div>
             </div>
             <div class="panel-body  Role" id="inrole">

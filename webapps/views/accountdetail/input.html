@@ -124,20 +124,20 @@ mincibil = ko.observable(0);
 				<div class="col-md-12">
 					<div class="panel-body btnFixed">
 						<div class="controls" style="text-align: left;">
-							<button id="onsave"  data-bind="visible: (adf.formVisibility() == true)" class="btn btn-sm btn-save separator ontop add-userrights confirm-userrights" onclick="adf.selectAction('save')" style="margin-right: inherit;">
+							<button id="onsave"  data-bind="visible: (adf.formVisibility() == true)" class="btn btn-sm btn-save separator ontop save-userrights" onclick="adf.selectAction('save')" style="margin-right: inherit;">
 								Save
 							</button>
-							<button id="onreset" data-bind="visible: (adf.formVisibility() == true )" class="btn btn-sm btn-reset separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.getReset()">
+							<button id="onreset" data-bind="visible: (adf.formVisibility() == true )" class="btn btn-sm btn-reset separator reset-userrights" style="margin-right: inherit;" onclick="adf.getReset()">
 								Reset
 							</button>
 							<button id="onconfirm"
-							data-bind="visible: (adf.formVisibility() == true), css: (adf.optionChangeConfirm().toLowerCase() == ' re enter' ? 'btn-reenter' : 'btn-confirm')" class="btn btn-sm separator ontop add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.selectAction('confirm')">
+							data-bind="visible: (adf.formVisibility() == true), css: (adf.optionChangeConfirm().toLowerCase() == ' re enter' ? 'btn-reenter' : 'btn-confirm')" class="btn btn-sm separator ontop confirm-userrights" style="margin-right: inherit;" onclick="adf.selectAction('confirm')">
 								<span data-bind="text: adf.optionChangeConfirm">Confirm
 							</button>
-							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  != true )" class="btn btn-sm btn-freeze onfreeze separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.selectAction('freeze')">
+							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  != true )" class="btn btn-sm btn-freeze onfreeze separator freeze-userrights" style="margin-right: inherit;" onclick="adf.selectAction('freeze')">
 								Freeze
 							</button>
-							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  == true)" class="btn btn-sm btn-unfreeze onfreeze separator add-userrights confirm-userrights" style="margin-right: inherit;" onclick="adf.getUnfreeze()">
+							<button data-bind="visible: (adf.formVisibility() == true && adf.form.Freeze()  == true)" class="btn btn-sm btn-unfreeze onfreeze separator unfreeze-userrights" style="margin-right: inherit;" onclick="adf.getUnfreeze()">
 								Unfreeze
 							</button>
 							<span class="form-last-confirmation-info pull-right"></span>
@@ -225,7 +225,7 @@ mincibil = ko.observable(0);
 				            	<div class="form-group">
 					            	<label class="form-label col-sm-4">PD Info</label>
 					            	<div class="col-sm-8 tooltipstered" id="tipster">
-					            		<button class="btn btn-flat btn-sm btn-add noable"  style="width:100%;" data-bind="click: adf.modalPdInfo"> Click to enter details & hover to show details</button>
+					            		<button class="btn btn-flat btn-sm btn-add noable enterdetail-userrights"  style="width:100%;" data-bind="click: adf.modalPdInfo"> Click to enter details & hover to show details</button>
 					            	</div>
 					            	<div class="clearfix"></div>
 				            	</div>
@@ -385,8 +385,8 @@ mincibil = ko.observable(0);
 						            			<input class="input-sm form-control noable" data-bind="value: adf.form.BorrowerDetails.TopCustomerNames()[$index()]"/>
 						            		</div>
 						            		<div class="col-sm-2">
-						            			<button class="btn btn-flat btn-sm btn-add noable" data-bind="click: adf.addTopCustomerNames, visible: ($index() == 0)"><i class="fa fa-plus"></i></button>
-						            			<button class="btn btn-flat btn-sm btn-danger noable" data-bind="click: adf.removeTopCustomerNames($index()),visible: ($index() > 0)"><i class="fa fa-trash"></i></button>
+						            			<button class="btn btn-flat btn-sm btn-add noable addcustomername-userrights" data-bind="click: adf.addTopCustomerNames, visible: ($index() == 0)"><i class="fa fa-plus"></i></button>
+						            			<button class="btn btn-flat btn-sm btn-danger noable removecustomername-userrights" data-bind="click: adf.removeTopCustomerNames($index()),visible: ($index() > 0)"><i class="fa fa-trash"></i></button>
 						            		</div>
 					            		</div>
 					            	</div>
@@ -402,8 +402,8 @@ mincibil = ko.observable(0);
 						            			<input class="input-sm form-control noable" data-bind="value: adf.form.BorrowerDetails.ProductNameandDetails()[$index()]"/>
 						            		</div>
 						            		<div class="col-sm-2">
-						            			<button class="btn btn-flat btn-sm btn-add noable" data-bind="click: adf.addProductNameandDetails, visible: ($index() == 0)"><i class="fa fa-plus"></i></button>
-						            			<button class="btn btn-flat btn-sm btn-danger noable" data-bind="click: adf.removeProductNameandDetails($index()),visible: ($index() > 0)"><i class="fa fa-trash"></i></button>
+						            			<button class="btn btn-flat btn-sm btn-add noable addproductname-userrights" data-bind="click: adf.addProductNameandDetails, visible: ($index() == 0)"><i class="fa fa-plus"></i></button>
+						            			<button class="btn btn-flat btn-sm btn-danger noable removecustomername-userrights" data-bind="click: adf.removeProductNameandDetails($index()),visible: ($index() > 0)"><i class="fa fa-trash"></i></button>
 						            		</div>
 					            		</div>
 					            	</div>
@@ -448,8 +448,8 @@ mincibil = ko.observable(0);
 						            			<input class="input-sm form-control noable" data-bind="value: adf.form.BorrowerDetails.CommentsonFinancials()[$index()]"/>
 						            		</div>
 						            		<div class="col-sm-2">
-						            			<button class="btn btn-flat btn-sm btn-add noable" data-bind="click: adf.addCommentsonFinancials, visible: ($index() == 0)"><i class="fa fa-plus"></i></button>
-						            			<button class="btn btn-flat btn-sm btn-danger noable" data-bind="click: adf.removeCommentsonFinancials($index()),visible: ($index() > 0)"><i class="fa fa-trash"></i></button>
+						            			<button class="btn btn-flat btn-sm btn-add noable addcomment-userrights" data-bind="click: adf.addCommentsonFinancials, visible: ($index() == 0)"><i class="fa fa-plus"></i></button>
+						            			<button class="btn btn-flat btn-sm btn-danger noable removecomment-userrights" data-bind="click: adf.removeCommentsonFinancials($index()),visible: ($index() > 0)"><i class="fa fa-trash"></i></button>
 						            		</div>
 					            		</div>
 					            		<!-- <textarea class="input-sm form-control" data-bind="value: CommentsonFinancials"></textarea> -->
@@ -510,7 +510,7 @@ mincibil = ko.observable(0);
 								<div class="form-group">
 									<label class="col-sm-4 form-label align-right">Reference Check Details </label>
 									<div class="col-sm-4">
-										<button class="btn btn-flat btn-sm btn-add noable" onclick="adf.addRowReffrence()" style="width: 100%;">Add Reference Check</button>
+										<button class="btn btn-flat btn-sm btn-add noable addreference-userrights" onclick="adf.addRowReffrence()" style="width: 100%;">Add Reference Check</button>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -535,7 +535,7 @@ mincibil = ko.observable(0);
 			  			<div class="panel-heading">
 					      <div class="panel-body">
 								<div class=" pull-left">
-				            	<button id="addpromotor" class="btn btn-sm btn-add" onclick="adf.addMorePromotor(this)">
+				            	<button id="addpromotor" class="btn btn-sm btn-add addmainpromotor-userrights" onclick="adf.addMorePromotor(this)">
 				            		Add Main Promoter
 				            	</button>
 				            	<!-- <button id="onsave"  data-bind="visible: (adf.formVisibility() == true )" class="btn btn-sm btn-save separator" onclick="adf.SavePersection('promotor')" style="margin-right: inherit;">
@@ -712,7 +712,7 @@ mincibil = ko.observable(0);
 			  				</div>
 					        <div class="panel-body" style="margin-left: -5px;">
 								<div class="pull-left">
-					            	<button id="addvendor1" class="btn btn-sm btn-add" onclick="adf.addMoreVendor(this)">
+					            	<button id="addvendor1" class="btn btn-sm btn-add addvendor-userrights" onclick="adf.addMoreVendor(this)">
 					            		Add Vendor
 					            	</button>
 					            	<!-- <button id="onsave"  data-bind="visible: (adf.formVisibility() == true )" class="btn btn-sm btn-save separator" onclick="adf.SavePersection('vendor')" style="margin-right: inherit;">
@@ -775,7 +775,7 @@ mincibil = ko.observable(0);
 						        			<div class="form-group" data-bind="visible: ($index() > 0)">
 						        				<!-- <input data-bind="value: DistributorName" type="text" class="input-sm form-control" placeholder="Enter value" style="float: left; width: 152px; margin-right: 5px;"> -->
 						        				<input class="vendor" data-bind="kendoDropDownList: { data: adf.optionLeadDistributors, value: DistributorName, optionLabel: 'Select One' }" type="text" class="input-sm form-control" style="width: 152px;">
-							            		<button class="btn btn-sm btn-danger dlt" style="float: right;" data-bind="click: adf.removeVendor($data)">
+							            		<button class="btn btn-sm btn-danger dlt removevendor-userrights" style="float: right;" data-bind="click: adf.removeVendor($data)">
 							            			<i class="fa fa-trash"></i>
 							            		</button>
 							            		<div class="clearfix"></div>
@@ -1151,7 +1151,7 @@ mincibil = ko.observable(0);
 
 					        <div class="panel-body">
 								<div class="pull-left">
-									<button id="addvendor" class="btn btn-sm btn-success separator" data-bind="visible: (adf.formVisibility() == true )" style="margin-right: inherit;" onclick="adf.addDistributorMix()">Add Vendor</button>
+									<button id="addvendor" class="btn btn-sm btn-success separator addvendor-userrights" data-bind="visible: (adf.formVisibility() == true )" style="margin-right: inherit;" onclick="adf.addDistributorMix()">Add Vendor</button>
 				            	</div>
 							</div>
 					    </div>
@@ -1169,7 +1169,7 @@ mincibil = ko.observable(0);
 						            			<input class="dist col-sm-4" data-bind="kendoNumericTextBox: { value: Result, format: '#.00 \\%', spinners:false }" type="number" style="width: 100%;">
 						            		</div>
 						            		<div class="col-md-4">
-						            			<button type="button" class="btn btn-sm btn-danger" data-bind="click: adf.removeDistributorMix($index()), attr:{'id' : 'del'+$index()}"><i class="fa fa-trash"></i></button>
+						            			<button type="button" class="btn btn-sm btn-danger removevendor-userrights" data-bind="click: adf.removeDistributorMix($index()), attr:{'id' : 'del'+$index()}"><i class="fa fa-trash"></i></button>
 						            		</div>
 						            	</div>
 						            	<div class="clearfix"></div>
@@ -1265,7 +1265,7 @@ mincibil = ko.observable(0);
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-sm btn-flat btn-primary" data-dismiss="modal" data-bind="click: adf.onclickDismissModal">Save</button>
+					<button type="button" class="btn btn-sm btn-flat btn-primary" data-dismiss="modal" data-bind="click: adf.onclickDismissModal">Submit</button>
 					<button type="button" class="btn btn-sm btn-flat btn-danger" data-dismiss="modal">Close</button>
 				</div>
 			</div>

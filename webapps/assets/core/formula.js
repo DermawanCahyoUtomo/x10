@@ -340,10 +340,10 @@ formula.render = function () {
 			}
 
 			return [
-				'<button class="btn btn-xs btn-primary tooltipster" title="Move up" data-direction="up" onclick="formula.moveTo(this, \'' + d.alias + '\')"><i class="fa fa-arrow-up"></i></button>',
-				'<button class="btn btn-xs btn-success tooltipster" title="Move down" data-direction="down" onclick="formula.moveTo(this, \'' + d.alias + '\')"><i class="fa fa-arrow-down"></i></button>',
-				'<button class="btn btn-xs btn-primary tooltipster" title="Edit formula" onclick="formula.editFinancial(\'' + d.alias + '\')"><i class="fa fa-edit"></i></button>',
-				'<button class="btn btn-xs btn-danger tooltipster" title="Delete formula" onclick="formula.deleteFinancial(\'' + d.alias + '\')"><i class="fa fa-trash"></i></button>',
+				'<button class="btn btn-xs btn-primary tooltipster moveup-userrights" title="Move up" data-direction="up" onclick="formula.moveTo(this, \'' + d.alias + '\')"><i class="fa fa-arrow-up"></i></button>',
+				'<button class="btn btn-xs btn-success tooltipster movedown-userrights" title="Move down" data-direction="down" onclick="formula.moveTo(this, \'' + d.alias + '\')"><i class="fa fa-arrow-down"></i></button>',
+				'<button class="btn btn-xs btn-primary tooltipster edit-userrights" title="Edit formula" onclick="formula.editFinancial(\'' + d.alias + '\')"><i class="fa fa-edit"></i></button>',
+				'<button class="btn btn-xs btn-danger tooltipster delete-userrights" title="Delete formula" onclick="formula.deleteFinancial(\'' + d.alias + '\')"><i class="fa fa-trash"></i></button>',
 			].join(' ')
 		}, width: 170 }
 	]
